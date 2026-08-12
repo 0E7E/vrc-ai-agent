@@ -30,6 +30,7 @@ def get_llm() -> ChatLiteLLM:
     global _llm_instance, _current_model
     model = os.environ.get("LITELLM_MODEL", "gemini/gemini-2.0-flash")
     timeout = float(os.environ.get("LLM_TIMEOUT", "30.0"))
+    api_base = os.environ.get("API_BASE", "")
 
     if _llm_instance is None or _current_model != model:
         logger.debug(
@@ -39,6 +40,7 @@ def get_llm() -> ChatLiteLLM:
             model=model,
             temperature=0.7,
             timeout=timeout,
+            api_base=api_base, #URL指定できるようにする
         )
         _current_model = model
 
