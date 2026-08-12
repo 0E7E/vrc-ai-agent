@@ -173,6 +173,14 @@ SPOUT_SENDER_NAME=VRCSender1
 デフォルト設定は`VRCSender1`として、VRChatの`ストリームカメラ`から `Spoutストリーム`を on にするだけで画面キャプチャができるようにしています。
 が、視野が狭いので、OBSで作者は画像を取得させました。  
 
+#### Spout OBSでの設定方法
+ [obs-spout2-plugin](https://github.com/Off-World-Live/obs-spout2-plugin) 
+をインストールする
+
+[設定手順](https://note.com/kotoha_siro_page/n/n8b87dc5d01f0)
+
+※spoutをstartすることを忘れないこと。
+
 <br>
 
 ## 起動方法
