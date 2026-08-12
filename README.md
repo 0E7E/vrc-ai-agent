@@ -69,7 +69,13 @@ git clone --branch v0.8.9 --depth 1 https://github.com/uezo/aiavatarkit.git lib/
 [uv](https://docs.astral.sh/uv/) を使用して仮想環境と依存パッケージをインストールします。
 
 ```bash
+export PYTHONUTF8=1 #文字コード変更
 uv sync
+uv pip install nvidia-cublas-cu12 nvidia-cuda-runtime-cu12
+
+export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cublas/bin:$PATH"
+export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cuda_runtime/bin:$PATH"
+export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cuda_nvrtc/bin:$PATH"
 ```
 
 > **uv がインストールされていない場合** は以下でインストールできます:
