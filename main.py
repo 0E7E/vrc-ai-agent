@@ -25,6 +25,10 @@ from agent.state import AgentState
 from inputs.audio import setup_audio_listener
 from core.context import AppContext, QueueEvent
 
+# CUDA設定の読み込み
+import runtime 
+runtime.initialize()
+
 
 # ── audio_listener ────────────────────────────────────────────────────────────
 

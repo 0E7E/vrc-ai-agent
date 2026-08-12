@@ -78,6 +78,13 @@ export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cuda_runtime/bin:$PATH"
 export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cuda_nvrtc/bin:$PATH"
 ```
 
+```bash
+export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cublas/bin:$PATH"
+export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cuda_runtime/bin:$PATH"
+export PATH="$(pwd)/.venv/Lib/site-packages/nvidia/cuda_nvrtc/bin:$PATH"
+```
+はruntime.pyを読み込めば不要
+
 > **uv がインストールされていない場合** は以下でインストールできます:
 > ```powershell
 > powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
